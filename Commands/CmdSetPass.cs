@@ -36,6 +36,8 @@ namespace MCForge.Commands {
         public CmdSetPass() { }
 
         public override void Use(Player p, string message) {
+        	if (!Directory.Exists("extra/passwords"))
+        		Directory.CreateDirectory("extra/passwords");
             if ( p.group.Permission < Server.verifyadminsrank ) {
                 Player.SendMessage(p, "You do not have the &crequired rank " + Server.DefaultColor + "to use this command!");
                 return;
