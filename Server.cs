@@ -1210,19 +1210,19 @@ namespace MCForge
 				gcnamebans.Clear();
 				using (var client = new WebClient())
 				{
-					string result = client.DownloadString("http://dev.forgeservers.net/mcforge/namebans.php");
+					string result = client.DownloadString("http://gccp.nextbattle.net/mcforge/namebans.php");
 					foreach (string line in result.Split('*'))
 					{
 						gcnamebans.Add(line);
 					}
 					gcnamebans.Remove("");
-					result = client.DownloadString("http://dev.forgeservers.net/mcforge/ipbans.php");
+                    result = client.DownloadString("http://gccp.nextbattle.net/mcforge/ipbans.php");
 					foreach (string line in result.Split('*'))
 					{
 						gcipbans.Add(line);
 					}
 					gcipbans.Remove("");
-					result = client.DownloadString("http://dev.forgeservers.net/mcforge/gcmods.php");
+                    result = client.DownloadString("http://gccp.nextbattle.net/mcforge/gcmods.php");
 					foreach (string line in result.Split('|'))
 					{
 						gcmods.Add(line.Split('*')[0]);
