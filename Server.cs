@@ -35,6 +35,7 @@ namespace MCForge
 {
 	public class Server
 	{
+        //testing git, amidoinitrite?
 		public static bool cancelcommand = false;
 		public static bool canceladmin = false;
 		public static bool cancellog = false;
