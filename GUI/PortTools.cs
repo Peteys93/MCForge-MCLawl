@@ -173,8 +173,10 @@ namespace MCForge.Gui.Popups {
         }
 
         void mWorkerForwarder_DoWork(object sender, DoWorkEventArgs e) {
+            int tries = 0;
             int port = (int)((object[])e.Argument)[0];
             bool adding = (bool)((object[])e.Argument)[1];
+            retry:
             try {
                 if (!UPnP.CanUseUpnp) {
                     e.Result = 0;
@@ -183,6 +185,7 @@ namespace MCForge.Gui.Popups {
                 else {
 
                     if (adding) {
+                        tries++;
                         UPnP.ForwardPort(port, ProtocolType.Tcp, "MCForgeServer");
                         e.Result = 1;
                     }
@@ -194,6 +197,8 @@ namespace MCForge.Gui.Popups {
                 }
             }
             catch {
+                if (tries < 2) goto retry;
+
                 e.Result = 2;
                 return;
             }
