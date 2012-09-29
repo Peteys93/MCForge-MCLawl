@@ -14,7 +14,7 @@ Copyright/License
 -----------------
 
 Unless otherwise noted, this software and its source code is
-Copyright 2011 MCForge & Copyright 2012 David Mitchell. licensed under the [MIT]
+Copyright 2011 MCForge & Copyright 2012 David Mitchell. licensed under the [MIT][3]
 
 In an effort to add copyright notices to the source code, we utilized automated methods to insert these.
 Some copyright attributions may be incorrect.  If you identify any such cases, please notify us immediately so we may correct it.
@@ -30,3 +30,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [1]: http://wiki.mcforge.net/index.php?title=Development
 [2]: http://www.mcforge.net
+[3]: https://raw.github.com/MCForge/MCForge-MCLawl/master/LICENSE.txt
