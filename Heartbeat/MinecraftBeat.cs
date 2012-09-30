@@ -22,7 +22,7 @@ using System.IO;
 namespace MCForge {
     class MinecraftBeat : IBeat {
 
-        public string URL { get { return "https://www.minecraft.net/heartbeat.jsp"; } }
+        public string URL { get { return "https://minecraft.net/heartbeat.jsp"; } }
         
         public bool Persistance {
             get { return false; }
